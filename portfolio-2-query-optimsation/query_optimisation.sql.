@@ -1,14 +1,18 @@
 USE library_management;
+
 -- 1. Examine the query plan before indexing
 EXPLAIN
 SELECT book_id, title, author
 FROM Books
 WHERE title = 'Hamlet';
+
 -- 2. Create an index on the book title
 CREATE INDEX idx_books_title
 ON Books(title);
+
 -- 3. Verify the index
 SHOW INDEX FROM Books;
+
 -- 4. Examine the query plan after indexing
 EXPLAIN
 SELECT book_id, title, author
