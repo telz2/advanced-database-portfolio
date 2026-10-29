@@ -1,0 +1,32 @@
+USE library_management;
+
+-- Portfolio 3: Transactions and Concurrency
+-- Case study: Library Management System
+
+-- 1. Check the available copies before the experiment
+SELECT book_id, title, available_copies
+FROM Books
+WHERE book_id = 1;
+
+-- 2. Demonstrate a transaction and row locking
+START TRANSACTION;
+
+SELECT book_id, title, available_copies
+FROM Books
+WHERE book_id = 1
+FOR UPDATE;
+
+-- 3. Cancel the transaction
+ROLLBACK;
+
+-- 4. Verify the available copies after rollback
+SELECT book_id, title, available_copies
+FROM Books
+WHERE book_id = 1;
+
+-- 5. Check the current transaction isolation level
+SELECT @@transaction_isolation;
+
+-- 6. View all books
+SELECT book_id, title, available_copies
+FROM Books;
