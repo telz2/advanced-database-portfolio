@@ -1,0 +1,28 @@
+Portfolio 4: Implementing a NoSQL Database
+1. Introduction
+For the Library Management System used in the earlier portfolios, this portfolio shows how to create a NoSQL database using MongoDB.
+2. Model of Database
+Because MongoDB has a document-oriented data model, it was chosen. Instead than using conventional relational tables, data is kept as adaptable BSON documents.
+The database created is library_nosql, and the collection is named books.
+Every book document includes:
+-Book ID
+-Title 
+-Author
+-Available copies
+Five book records were inserted into the MongoDB collection. These entries match the five books that were utilized in Portfolio 1's MySQL implementation.
+3. Data Implementation
+The MongoDB collection now has five book records. These entries match the five books that were utilized in Portfolio 1's MySQL implementation.
+4. Database Functions
+The MongoDB implementation comprises queries for:
+-Obtaining every book record.
+-Looking up a certain book by title.
+-Sorting books according to the copies that are available.
+-Updating a temporary test document.
+-Removing a temporary test document.
+5. MongoDB's suitability
+MongoDB's document model supports flexible data formats, which makes it appropriate for the library system. It is not necessary for every document to have the same structure in order to add additional book information, such as categories, publishers, and tags.
+Additionally, it allows you to search, filter, update, and remove documents.
+6. Conclusion
+This exercise gave me hands-on practice creating MongoDB databases, inserting documents, and manipulating data. Additionally, it showed how the Library Management System may be supported by a document-oriented NoSQL database.
+7. Evidence
+Screenshots of the MongoDB collection and query operations will be included as practical evidence.
